@@ -1,0 +1,8 @@
+# Crypto Docket
+
+> Crypto Docket reports news across crypto: Bitcoin and Ethereum, layer-2 networks, DeFi, stablecoins, exchanges, regulation and security incidents.
+
+## Key pages
+- [Homepage](https://blockchainnewshub.github.io/): latest reporting and analysis.
+- [About](https://blockchainnewshub.github.io/about/): editorial scope, independence, sourcing and corrections.
+- [Archive](https://blockchainnewshub.github.io/archive/): everything published.

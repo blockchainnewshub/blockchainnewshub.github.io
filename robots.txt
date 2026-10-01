@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blockchainnewshub.github.io/sitemap.xml
