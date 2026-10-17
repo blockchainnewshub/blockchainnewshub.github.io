@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en-US" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Public RPC Delays in Crypto Bridges, Explained</title>
+<meta name="description" content="A bridge can be ready while a public RPC is not; see why endpoint lag stalls cross-chain updates, how it differs from a failed transfer, and what to check next.">
+<link rel="canonical" href="https://blockchainnewshub.github.io/why-a-cross-chain-bridge-can-wait-on-a-public-rpc/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#ffffff">
+<meta name="author" content="Crypto Docket Newsroom"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Crypto Docket">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Why a Cross-Chain Bridge Can Wait on a Public RPC">
+<meta property="og:description" content="A bridge can be ready while a public RPC is not; see why endpoint lag stalls cross-chain updates, how it differs from a failed transfer, and what to check next.">
+<meta property="og:url" content="https://blockchainnewshub.github.io/why-a-cross-chain-bridge-can-wait-on-a-public-rpc/">
+<meta property="og:image" content="https://blockchainnewshub.github.io/assets/covers/why-a-cross-chain-bridge-can-wait-on-a-public-rpc-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Why a Cross-Chain Bridge Can Wait on a Public RPC"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why a Cross-Chain Bridge Can Wait on a Public RPC">
+<meta name="twitter:description" content="A bridge can be ready while a public RPC is not; see why endpoint lag stalls cross-chain updates, how it differs from a failed transfer, and what to check next.">
+<meta property="article:published_time" content="2026-10-17T08:20:43+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sce8af66c72.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Crypto Docket" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://blockchainnewshub.github.io/why-a-cross-chain-bridge-can-wait-on-a-public-rpc/#webpage",
+      "url": "https://blockchainnewshub.github.io/why-a-cross-chain-bridge-can-wait-on-a-public-rpc/",
+      "name": "Public RPC Delays in Crypto Bridges, Explained",
+      "isPartOf": {
+        "@id": "https://blockchainnewshub.github.io/#website"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://blockchainnewshub.github.io/why-a-cross-chain-bridge-can-wait-on-a-public-rpc/#article",
+      "headline": "Why a Cross-Chain Bridge Can Wait on a Public RPC",
+      "isAccessibleForFree": true,
+      "description": "A bridge can be ready while a public RPC is not; see why endpoint lag stalls cross-chain updates, how it differs from a failed transfer, and what to check next.",
+      "datePublished": "2026-10-17T08:20:43+00:00",
+      "dateModified": "2026-10-17T08:20:43+00:00",
+      "url": "https://blockchainnewshub.github.io/why-a-cross-chain-bridge-can-wait-on-a-public-rpc/",
+      "mainEntityOfPage": {
+        "@id": "https://blockchainnewshub.github.io/why-a-cross-chain-bridge-can-wait-on-a-public-rpc/#webpage"
+      },
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://blockchainnewshub.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://blockchainnewshub.github.io/#org"
+      },
+      "wordCount": 902,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://blockchainnewshub.github.io/assets/covers/why-a-cross-chain-bridge-can-wait-on-a-public-rpc-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://blockchainnewshub.github.io/assets/covers/why-a-cross-chain-bridge-can-wait-on-a-public-rpc-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://blockchainnewshub.github.io/assets/covers/why-a-cross-chain-bridge-can-wait-on-a-public-rpc-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://blockchainnewshub.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Why a Cross-Chain Bridge Can Wait on a Public RPC",
+          "item": "https://blockchainnewshub.github.io/why-a-cross-chain-bridge-can-wait-on-a-public-rpc/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://blockchainnewshub.github.io/#org",
+      "name": "Crypto Docket",
+      "url": "https://blockchainnewshub.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://blockchainnewshub.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://blockchainnewshub.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://blockchainnewshub.github.io/standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://blockchainnewshub.github.io/#website",
+      "name": "Crypto Docket",
+      "url": "https://blockchainnewshub.github.io/",
+      "publisher": {
+        "@id": "https://blockchainnewshub.github.io/#org"
+      },
+      "inLanguage": "en-US",
+      "description": "Crypto Docket reports news across crypto: Bitcoin and Ethereum, layer-2 networks, DeFi, stablecoins, exchanges, regulation and security incidents."
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s6db0edf" href="#main">Skip to the article</a>
+<header class="sc5e9ef6">
+  <div class="sf3799ad">
+    <a class="sbf40a0f" href="/">Crypto Docket</a>
+    <p class="sd21137d">Crypto news and comparative analysis</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="s9d8e0b6 sf34fbbb">
+  <div class="s97355c0">
+    <h1 class="s741b8b2">Why a Cross-Chain Bridge Can Wait on a Public RPC</h1>
+<p class="s52858b3">A bridge can be ready while a public RPC is not; see why endpoint lag stalls cross-chain updates, how it differs from a failed transfer, and what to check next.</p>    <p class="sd8e529b s6f221ef"><span class="s4a6dcf1">By Crypto Docket Newsroom</span><time datetime="2026-10-17T08:20:43+00:00" title="2026-10-17 08:20 UTC">Oct 17, 2026 · 08:20 UTC</time><span class="s93c62a6">#7a9e34</span><span>5 min read</span></p>
+  </div>
+  <figure class="sba041b6"><img fetchpriority="high" class="sb54efa2" src="/assets/covers/why-a-cross-chain-bridge-can-wait-on-a-public-rpc.jpg" alt="Why a Cross-Chain Bridge Can Wait on a Public RPC" width="1200" height="630"></figure>
+  <div class="sa680cdf"><p>A cross-chain bridge can show a transfer as pending because the public RPC it relies on has not delivered a usable update, even when the source transaction is already onchain. Compared with a failed transaction, this is often a delay in reading or relaying information; compared with a private or self-operated endpoint, a shared public RPC can be easier to access but less predictable under load. The distinction matters: waiting for an update is different from sending the transfer again, which could create a second transaction.</p>
+
+<p>A bridge needs to learn that an event happened on one chain before it can arrange or confirm the next step on another. It may do that through its own infrastructure, through a relayer, or through a front end that reads chain data from an RPC provider. RPC, short for remote procedure call, is the interface software uses to ask a node for information or to submit a transaction. It is not the blockchain itself. If that interface is slow, limited, or behind the chain’s latest state, the bridge’s view can lag the network.</p>
+
+<p>For readers comparing the user steps across services, the <a href="https://staking-primer.gitbook.io/staking-primer-docs/acrossbridge-5-steps-to-move-or-swap-across-chains" rel="noopener">Across Bridge’s five steps for moving assets</a> offer a concrete walkthrough. The broader point applies beyond any one bridge: several separate systems have to agree on what happened before a transfer looks complete.</p>
+
+<h2>Why does a public RPC make a bridge wait?</h2>
+
+<p>A bridge waits when the data it needs has not reached the component responsible for checking or acting on it. A public RPC endpoint serves many users and applications, and providers may apply rate limits or return errors when demand is high. It can also respond more slowly than another endpoint or provide a view that has not yet caught up with recent blocks. The bridge may then retry its request, wait for another check, or continue only after it can verify the required event.</p>
+
+<p>That creates a visible gap between the chain and the interface. A wallet may show a confirmed source transaction while the bridge page still says pending, because those displays can rely on different data paths and update schedules. A bridge’s relayer may also be waiting for its own checks, which can include the chain’s confirmation or finality rules. An RPC delay is one possible cause of a pause, but it does not explain every pending transfer.</p>
+
+<p>The practical trade-off is availability versus control. A shared public endpoint is convenient and requires no infrastructure from the user. A provider’s dedicated service or an operator’s own node can offer more control over access and performance, but someone must configure, pay for, and maintain it. Neither option changes the bridge’s security rules or makes the destination action instantaneous; it changes how reliably software can query or submit data.</p>
+
+<h2>How can you tell an RPC delay from a failed transfer?</h2>
+
+<p>Start with the source transaction’s status on the source chain, then compare it with the bridge’s displayed status. If the transaction is still pending or failed in the wallet or chain explorer, the issue is upstream of the bridge’s later steps. If it is confirmed onchain but the bridge has not advanced, the transaction may be waiting for the bridge’s checks, a relayer, or a data update. A mismatch is a clue to investigate, not proof that the public RPC is at fault.</p>
+
+<p>Check the transaction hash and the exact network before taking action. A correct hash lets you look up the original transaction independently of the bridge page. Read the bridge’s status and any stated waiting period or support guidance; confirmation requirements and completion steps vary by bridge and route. Avoid submitting a second transfer simply because one screen has not refreshed. If the original transaction succeeded, a duplicate can move additional funds rather than resolve the first transfer.</p>
+
+<p>Useful checks are:</p>
+
+<ul>
+<li>Confirm the source transaction’s status and destination details on the correct chain.</li>
+<li>Refresh the bridge page or reconnect the wallet, then compare the status again.</li>
+<li>Check whether the bridge reports a relayer or destination step still in progress.</li>
+<li>Keep the transaction hash and use the bridge’s official support route if its stated process appears stuck.</li>
+</ul>
+
+<p>These checks help separate a display that has not updated from a transaction that did not succeed. They do not establish that an endpoint is healthy, and a generic RPC status page may not reflect the endpoint actually used by the bridge or wallet.</p>
+
+<h2>What should you do while the bridge is pending?</h2>
+
+<p>Wait for the bridge’s stated process to advance before repeating a transfer, and use the source transaction hash to track what already happened. If the source transaction is confirmed and the bridge remains pending beyond its own guidance, collect the hash, route, and status message for support. A wallet’s option to change its RPC can help diagnose whether that wallet is reading stale data, but it may not change the bridge’s backend or relayer, which can use separate infrastructure.</p>
+
+<p>For most readers, the better default is to verify the transaction and follow the bridge’s own status instructions rather than switch endpoints or resubmit immediately. An alternate RPC can provide a useful second view, but different endpoints can disagree temporarily, and changing one does not reverse or speed up an already confirmed transaction. The next signals to watch are whether the source transaction is confirmed, whether the bridge recognizes it, and whether the destination step moves from pending to complete.</p></div>
+  <aside class="saeb003b" aria-labelledby="related-head">
+    <h2 class="s566f682" id="related-head">Related coverage</h2>
+    <ul class="s89ba615">
+<li><a href="/route-simulation-shows-the-likely-result-before-you-sign/">Route Simulation Shows the Likely Result Before You Sign</a></li><li><a href="/when-chain-maintenance-delays-a-bridge-check-these-four-things/">When Chain Maintenance Delays a Bridge, Check These Four Things</a></li><li><a href="/when-does-a-bridge-actually-deliver-wrapped-tokens/">When Does a Bridge Actually Deliver Wrapped Tokens?</a></li><li><a href="/how-to-check-a-pending-mantle-token-migration/">How to Check a Pending Mantle Token Migration</a></li>    </ul>
+  </aside>
+</article>
+</main>
+
+<footer class="s717db98">
+  <div class="s8b40af0">
+    <p class="s9dc63c3">Crypto Docket</p>
+    <nav class="s1ef0854" aria-label="Site">
+      <ul>
+<li><a href="/">Front page</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/standards/">Our standards</a></li>      </ul>
+    </nav>
+    <p class="s0de5741">Independent crypto coverage, for information only.</p>
+    <p class="sa3422f8">© 2026 Crypto Docket</p>
+  </div>
+</footer>
+</body>
+</html>
