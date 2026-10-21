@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en-US" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AMM Swap Slippage: How Integrators Should Set Tolerance</title>
+<meta name="description" content="A useful slippage limit balances failed swaps against worse fills. Set it from route-level quotes, execution conditions and a clear minimum acceptable outcome.">
+<link rel="canonical" href="https://blockchainnewshub.github.io/amm-slippage-settings-should-follow-the-trade-not-a-fixed-default/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#ffffff">
+<meta name="author" content="Crypto Docket Newsroom"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Crypto Docket">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="AMM slippage settings should follow the trade, not a fixed default">
+<meta property="og:description" content="A useful slippage limit balances failed swaps against worse fills. Set it from route-level quotes, execution conditions and a clear minimum acceptable outcome.">
+<meta property="og:url" content="https://blockchainnewshub.github.io/amm-slippage-settings-should-follow-the-trade-not-a-fixed-default/">
+<meta property="og:image" content="https://blockchainnewshub.github.io/assets/covers/amm-slippage-settings-should-follow-the-trade-not-a-fixed-default-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AMM slippage settings should follow the trade, not a fixed default"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AMM slippage settings should follow the trade, not a fixed default">
+<meta name="twitter:description" content="A useful slippage limit balances failed swaps against worse fills. Set it from route-level quotes, execution conditions and a clear minimum acceptable outcome.">
+<meta property="article:published_time" content="2026-10-21T23:02:48+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sce8af66c72.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Crypto Docket" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://blockchainnewshub.github.io/amm-slippage-settings-should-follow-the-trade-not-a-fixed-default/#webpage",
+      "url": "https://blockchainnewshub.github.io/amm-slippage-settings-should-follow-the-trade-not-a-fixed-default/",
+      "name": "AMM Swap Slippage: How Integrators Should Set Tolerance",
+      "isPartOf": {
+        "@id": "https://blockchainnewshub.github.io/#website"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://blockchainnewshub.github.io/amm-slippage-settings-should-follow-the-trade-not-a-fixed-default/#article",
+      "headline": "AMM slippage settings should follow the trade, not a fixed default",
+      "isAccessibleForFree": true,
+      "description": "A useful slippage limit balances failed swaps against worse fills. Set it from route-level quotes, execution conditions and a clear minimum acceptable outcome.",
+      "datePublished": "2026-10-21T23:02:48+00:00",
+      "dateModified": "2026-10-21T23:02:48+00:00",
+      "url": "https://blockchainnewshub.github.io/amm-slippage-settings-should-follow-the-trade-not-a-fixed-default/",
+      "mainEntityOfPage": {
+        "@id": "https://blockchainnewshub.github.io/amm-slippage-settings-should-follow-the-trade-not-a-fixed-default/#webpage"
+      },
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://blockchainnewshub.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://blockchainnewshub.github.io/#org"
+      },
+      "wordCount": 838,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://blockchainnewshub.github.io/assets/covers/amm-slippage-settings-should-follow-the-trade-not-a-fixed-default-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://blockchainnewshub.github.io/assets/covers/amm-slippage-settings-should-follow-the-trade-not-a-fixed-default-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://blockchainnewshub.github.io/assets/covers/amm-slippage-settings-should-follow-the-trade-not-a-fixed-default-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://blockchainnewshub.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AMM slippage settings should follow the trade, not a fixed default",
+          "item": "https://blockchainnewshub.github.io/amm-slippage-settings-should-follow-the-trade-not-a-fixed-default/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://blockchainnewshub.github.io/#org",
+      "name": "Crypto Docket",
+      "url": "https://blockchainnewshub.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://blockchainnewshub.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://blockchainnewshub.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://blockchainnewshub.github.io/standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://blockchainnewshub.github.io/#website",
+      "name": "Crypto Docket",
+      "url": "https://blockchainnewshub.github.io/",
+      "publisher": {
+        "@id": "https://blockchainnewshub.github.io/#org"
+      },
+      "inLanguage": "en-US",
+      "description": "Crypto Docket reports news across crypto: Bitcoin and Ethereum, layer-2 networks, DeFi, stablecoins, exchanges, regulation and security incidents."
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s6db0edf" href="#main">Skip to the article</a>
+<header class="sc5e9ef6">
+  <div class="sf3799ad">
+    <a class="sbf40a0f" href="/">Crypto Docket</a>
+    <p class="sd21137d">Crypto news and comparative analysis</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="s9d8e0b6 sf34fbbb">
+  <div class="s97355c0">
+    <h1 class="s741b8b2">AMM slippage settings should follow the trade, not a fixed default</h1>
+<p class="s52858b3">A useful slippage limit balances failed swaps against worse fills. Set it from route-level quotes, execution conditions and a clear minimum acceptable outcome.</p>    <p class="sd8e529b s6f221ef"><span class="s4a6dcf1">By Crypto Docket Newsroom</span><time datetime="2026-10-21T23:02:48+00:00" title="2026-10-21 23:02 UTC">Oct 21, 2026 · 23:02 UTC</time><span class="s93c62a6">#f7bffe</span><span>5 min read</span></p>
+  </div>
+  <figure class="sba041b6"><img fetchpriority="high" class="sb54efa2" src="/assets/covers/amm-slippage-settings-should-follow-the-trade-not-a-fixed-default.jpg" alt="AMM slippage settings should follow the trade, not a fixed default" width="1200" height="630"></figure>
+  <div class="sa680cdf"><p>AMM integrators should set swap slippage from each trade’s quoted output and execution conditions, rather than apply one wide default to every route. Compared with a fixed setting, a trade-specific limit can reduce unnecessary failures on fast or thin markets while keeping a tighter cap on routine swaps. The cost is more work: teams need sound quotes, a clear policy and monitoring to tell when the policy is too strict or too loose.</p>
+
+<h2>What does a slippage limit actually control?</h2>
+
+<p>It sets the worst output an exact-input swap will accept after the quote is built. If the route quotes 100 output tokens and tolerance is 0.5%, the transaction’s minimum output is 99.5; an execution below that should revert. For an exact-output swap, the equivalent guard is a maximum input. The limit gives a pending trade room to absorb price movement, but does not promise that the quoted output will arrive.</p>
+
+<p>That guard is different from price impact. Price impact is the expected effect of the trade itself on the pool price; slippage usually describes the difference between the quote and execution as the market changes or transactions are ordered before the swap. Interfaces sometimes use the terms loosely, so integrators should define them separately in code and analytics. The slippage limit should be applied to a reliable route quote that already accounts for the trade size, fees and expected output.</p>
+
+<p>For a closer look at how network selection, swaps and pool choice shape an integration, <a href="https://graph.org/SpookySwap-How-Developers-Choose-Networks-Swaps-and-Pools-10-21" rel="noopener">this SpookySwap guide to network, swap and pool decisions</a> goes further. Those choices affect the execution context; the limit itself remains the integrator’s bound on the outcome it will accept.</p>
+
+<h2>How should integrators choose the tolerance?</h2>
+
+<p>Choose the narrowest tolerance that still lets the intended trade execute under observed conditions. A broad setting makes inclusion more likely when prices move, but it also permits execution farther from the quote. A narrow setting limits that gap, but more transactions may revert after even modest movement. A reverted swap usually means no token exchange, though the sender can still pay network fees.</p>
+
+<p>Start with the route, not just the token pair. A direct swap and a multi-pool route can have different depth, fees and exposure to price movement. A large order relative to available liquidity can move the pool price substantially before it is submitted; widening tolerance does not undo that price impact. Compare the expected output against an independent reference where appropriate, and avoid treating an unusually poor quote as a reason to relax the limit.</p>
+
+<p>For an integrator, a useful policy has three parts:</p>
+
+<ul>
+<li>Calculate the minimum output from the current route quote and the trade’s tolerance.</li>
+<li>Set tolerance by route conditions, including liquidity, volatility and the expected time to inclusion.</li>
+<li>Record quote, limit, route and outcome so that failed and worse-than-quoted executions can inform later tuning.</li>
+</ul>
+
+<p>These are inputs to a policy, not a universal percentage table. A stable, deep route may support a tighter bound than a volatile, thin route, but the appropriate gap depends on actual quote movement and transaction timing. If one category repeatedly fails, investigate quote freshness, route selection and inclusion delay before increasing its tolerance across the board.</p>
+
+<h2>Should the limit be fixed, adaptive or user-set?</h2>
+
+<p>A fixed default is simple to explain and test, but it treats quiet and volatile conditions alike. An adaptive limit can use route-specific estimates of price movement while a transaction is pending; it can improve completion when conditions change, but only if the estimates are current and bounded. A user-set value offers control, but can expose users to a setting they do not understand, especially if the interface gives no clear minimum output.</p>
+
+<p>For most integrations, a bounded adaptive policy with a visible minimum output is the stronger starting point. Set a conservative floor and ceiling, then adjust within them using measured quote drift and inclusion time. Keep the same policy legible in the interface: show the expected output, minimum acceptable output and, where relevant, price impact as separate figures. If the system cannot explain why a trade received a wider limit, it is difficult to audit and difficult for users to trust.</p>
+
+<p>Do not use slippage tolerance as a substitute for an independent price check or a transaction deadline. A wide bound can leave more room for adverse transaction ordering, including sandwiching; a deadline limits how long a stale transaction remains valid, while a price check can reject a quote that is already unreasonable before submission. Keep these protections distinct, and test how each behaves on the specific router and chain being integrated.</p>
+
+<p>The signals to watch next are the gap between quoted and executed output, revert rates by route and market condition, inclusion delays, and how often the configured minimum output is nearly reached. Rising failures may point to limits that are too tight or quotes that have gone stale. More fills near the minimum may point to limits that are too loose or execution quality that needs attention. Adjust against those outcomes, one route class at a time.</p></div>
+  <aside class="saeb003b" aria-labelledby="related-head">
+    <h2 class="s566f682" id="related-head">Related coverage</h2>
+    <ul class="s89ba615">
+<li><a href="/manta-bridge-what-changes-when-funds-move-to-manta-pacific/">manta bridge: what changes when funds move to Manta Pacific</a></li><li><a href="/jpmorgan-takes-jpm-coin-from-base-to-ethereum-mainnet/">JPMorgan takes JPM Coin from Base to Ethereum mainnet</a></li><li><a href="/a-tron-swap-is-a-quote-a-contract-call-and-a-balance-check/">A tron swap is a quote, a contract call and a balance check</a></li><li><a href="/mesh-links-wallet-balances-to-visas-175-million-merchants/">Mesh links wallet balances to Visa’s 175 million merchants</a></li>    </ul>
+  </aside>
+</article>
+</main>
+
+<footer class="s717db98">
+  <div class="s8b40af0">
+    <p class="s9dc63c3">Crypto Docket</p>
+    <nav class="s1ef0854" aria-label="Site">
+      <ul>
+<li><a href="/">Front page</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/standards/">Our standards</a></li>      </ul>
+    </nav>
+    <p class="s0de5741">Independent crypto coverage, for information only.</p>
+    <p class="sa3422f8">© 2026 Crypto Docket</p>
+  </div>
+</footer>
+</body>
+</html>
