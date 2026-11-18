@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en-US" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AMB destination contract call failure: recovery</title>
+<meta name="description" content="What happens when an AMB destination contract call fails? The receiver’s state change reverts; recovery depends on whether the relay records failure or reverts.">
+<link rel="canonical" href="https://blockchainnewshub.github.io/what-happens-when-an-amb-destination-contract-call-fails/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#ffffff">
+<meta name="author" content="Crypto Docket Newsroom"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Crypto Docket">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="What happens when an AMB destination contract call fails?">
+<meta property="og:description" content="What happens when an AMB destination contract call fails? The receiver’s state change reverts; recovery depends on whether the relay records failure or reverts.">
+<meta property="og:url" content="https://blockchainnewshub.github.io/what-happens-when-an-amb-destination-contract-call-fails/">
+<meta property="og:image" content="https://blockchainnewshub.github.io/assets/covers/what-happens-when-an-amb-destination-contract-call-fails-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="What happens when an AMB destination contract call fails?"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What happens when an AMB destination contract call fails?">
+<meta name="twitter:description" content="What happens when an AMB destination contract call fails? The receiver’s state change reverts; recovery depends on whether the relay records failure or reverts.">
+<meta property="article:published_time" content="2026-11-18T13:50:46+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sce8af66c72.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Crypto Docket" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://blockchainnewshub.github.io/what-happens-when-an-amb-destination-contract-call-fails/#webpage",
+      "url": "https://blockchainnewshub.github.io/what-happens-when-an-amb-destination-contract-call-fails/",
+      "name": "AMB destination contract call failure: recovery",
+      "isPartOf": {
+        "@id": "https://blockchainnewshub.github.io/#website"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://blockchainnewshub.github.io/what-happens-when-an-amb-destination-contract-call-fails/#article",
+      "headline": "What happens when an AMB destination contract call fails?",
+      "isAccessibleForFree": true,
+      "description": "What happens when an AMB destination contract call fails? The receiver’s state change reverts; recovery depends on whether the relay records failure or reverts.",
+      "datePublished": "2026-11-18T13:50:46+00:00",
+      "dateModified": "2026-11-18T13:50:46+00:00",
+      "url": "https://blockchainnewshub.github.io/what-happens-when-an-amb-destination-contract-call-fails/",
+      "mainEntityOfPage": {
+        "@id": "https://blockchainnewshub.github.io/what-happens-when-an-amb-destination-contract-call-fails/#webpage"
+      },
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://blockchainnewshub.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://blockchainnewshub.github.io/#org"
+      },
+      "wordCount": 600,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://blockchainnewshub.github.io/assets/covers/what-happens-when-an-amb-destination-contract-call-fails-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://blockchainnewshub.github.io/assets/covers/what-happens-when-an-amb-destination-contract-call-fails-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://blockchainnewshub.github.io/assets/covers/what-happens-when-an-amb-destination-contract-call-fails-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://blockchainnewshub.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "What happens when an AMB destination contract call fails?",
+          "item": "https://blockchainnewshub.github.io/what-happens-when-an-amb-destination-contract-call-fails/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://blockchainnewshub.github.io/#org",
+      "name": "Crypto Docket",
+      "url": "https://blockchainnewshub.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://blockchainnewshub.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://blockchainnewshub.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://blockchainnewshub.github.io/standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://blockchainnewshub.github.io/#website",
+      "name": "Crypto Docket",
+      "url": "https://blockchainnewshub.github.io/",
+      "publisher": {
+        "@id": "https://blockchainnewshub.github.io/#org"
+      },
+      "inLanguage": "en-US",
+      "description": "Crypto Docket reports news across crypto: Bitcoin and Ethereum, layer-2 networks, DeFi, stablecoins, exchanges, regulation and security incidents."
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s6db0edf" href="#main">Skip to the article</a>
+<header class="sc5e9ef6">
+  <div class="sf3799ad">
+    <a class="sbf40a0f" href="/">Crypto Docket</a>
+    <p class="sd21137d">Crypto news and comparative analysis</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="s9d8e0b6 sf34fbbb">
+  <div class="s97355c0">
+    <h1 class="s741b8b2">What happens when an AMB destination contract call fails?</h1>
+<p class="s52858b3">What happens when an AMB destination contract call fails? The receiver’s state change reverts; recovery depends on whether the relay records failure or reverts.</p>    <p class="sd8e529b s6f221ef"><span class="s4a6dcf1">By Crypto Docket Newsroom</span><time datetime="2026-11-18T13:50:46+00:00" title="2026-11-18 13:50 UTC">Nov 18, 2026 · 13:50 UTC</time><span class="s93c62a6">#c2f7c4</span><span>3 min read</span></p>
+  </div>
+  <figure class="sba041b6"><img fetchpriority="high" class="sb54efa2" src="/assets/covers/what-happens-when-an-amb-destination-contract-call-fails.jpg" alt="What happens when an AMB destination contract call fails?" width="1200" height="630"></figure>
+  <div class="sa680cdf"><p>When an AMB destination contract call fails, the receiver’s changes revert while the source transaction stays committed; recovery depends on whether the relay records the failure or reverts.</p>
+<h2>What happens during an AMB destination call?</h2>
+<p>The Arbitrary Message Bridge takes a target address, encoded call data and a gas allowance, then executes that call in a destination-chain transaction. The source transaction and destination relay are separate transactions, so a destination failure does not undo the source-chain transaction.</p>
+<p>On Gnosis Bridge, an ordinary relay through <em>executeSignatures</em> can record a failed call and still complete the relay transaction. For more on how the bridge moves tokens and messages between Ethereum and Gnosis Chain, see <a href="https://dev.to/bridgette_wisoky/what-is-gnosis-bridge-how-token-transfers-and-gas-work-37cn" rel="noopener">gnosis chain bridge</a>.</p>
+<p>The destination contract’s state changes roll back when its call reverts. The bridge stores <em>false</em> in <em>messageCallStatus</em> and stores information identifying the failed message, including its data hash, receiver and sender. The relay is marked as processed, which prevents the same ordinary relay from being executed again. The [MessageProcessor.sol](https://github.com/gnosischain/tokenbridge-contracts/blob/master/contracts/upgradeable_contracts/arbitrary_message/MessageProcessor.sol) code defines the status and failed-message fields.</p>
+<p>Common causes include a paused receiver, invalid call arguments or too little gas for the receiver’s work. A relay can fail for different reasons, but its stored status and transaction outcome reveal whether execution was recorded or rolled back.</p>
+<h2>What does a failed call look like in practice?</h2>
+<p>Say a message targets a receiver contract and carries encoded <em>setValue(7)</em> data with a gas allowance. The receiver is paused and its function reverts. Its stored value remains unchanged because the failed subcall’s state changes are rolled back.</p>
+<p>With ordinary <em>executeSignatures</em>, the destination transaction can still finish: the bridge records the failed status and the relay as processed. That gives the application a recorded failure to inspect, but the same message is no longer eligible for ordinary relay execution. A new attempt needs a recovery path supported by the application.</p>
+<p>With <em>safeExecuteSignatures</em>, receiver failure reverts the relay transaction itself. The relay mark and other changes made in that transaction also roll back, preserving the message’s eligibility for resubmission. The <a href="https://github.com/gnosischain/tokenbridge-contracts/blob/master/contracts/upgradeable_contracts/arbitrary_message/BasicForeignAMB.sol" rel="nofollow noopener">BasicForeignAMB.sol</a> code distinguishes the ordinary and safe execution paths.</p>
+<h2>Can you retry or recover a failed AMB message?</h2>
+<p>Recovery depends on which outcome the destination transaction recorded. A stored failure from ordinary execution requires an application-supported recovery process; the bridge’s failed-message data helps identify what failed, but does not by itself make the message eligible for the same ordinary relay again.</p>
+<p>A reverted safe relay has a different trade-off. Because the transaction did not commit its relay mark, the message can be submitted again after the cause is resolved. That might mean unpausing the receiver, correcting a receiver-side condition or allowing enough gas for the call. Resubmission still requires a valid message and signatures.</p>
+<p>In either path, gas spent on a submitted transaction is not restored by the receiver’s revert. A failed destination call also does not automatically refund a user: refunds depend on the application’s own rules and recovery support.</p>
+<h2>What should developers check after a destination failure?</h2>
+<p>Developers should first distinguish a recorded failed execution from a reverted relay. For an ordinary relay, inspect <em>messageCallStatus</em> and the stored failed-message details, then follow the application’s supported recovery process. For a safe relay, inspect the reverted transaction, resolve the receiver failure and resubmit the message if it remains valid.</p>
+<p>That distinction is the key operational difference: ordinary execution preserves a record of failure but consumes ordinary relay eligibility; safe execution rolls the relay back and preserves resubmission eligibility, while spending gas on the failed attempt. Check the receiver’s pause state, arguments and gas allowance before choosing the next step.</p></div>
+  <aside class="saeb003b" aria-labelledby="related-head">
+    <h2 class="s566f682" id="related-head">Related coverage</h2>
+    <ul class="s89ba615">
+<li><a href="/wallet-disconnection-and-trc-20-allowances/">Wallet Disconnection and TRC-20 Allowances</a></li><li><a href="/how-do-sidechain-bridges-differ-from-rollup-bridges-security-exits-and/">How do sidechain bridges differ from rollup bridges? Security, exits and speed</a></li><li><a href="/token-approval-what-a-dex-can-do-with-your-allowance/">Token approval: What a DEX can do with your allowance</a></li><li><a href="/is-sunswap-safe-what-a-first-swap-permits/">Is SunSwap safe: what a first swap permits</a></li>    </ul>
+  </aside>
+</article>
+</main>
+
+<footer class="s717db98">
+  <div class="s8b40af0">
+    <p class="s9dc63c3">Crypto Docket</p>
+    <nav class="s1ef0854" aria-label="Site">
+      <ul>
+<li><a href="/">Front page</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/standards/">Our standards</a></li>      </ul>
+    </nav>
+    <p class="s0de5741">Independent crypto coverage, for information only.</p>
+    <p class="sa3422f8">© 2026 Crypto Docket</p>
+  </div>
+</footer>
+</body>
+</html>
